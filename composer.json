@@ -1,0 +1,27 @@
+{
+  "name": "sevendays/twill-redirects",
+  "description": "A twill package",
+  "homepage": "https://github.com/sevendays/twill-redirects",
+  "license": "MIT",
+  "require": {
+    "php": ">=8",
+    "area17/twill": "^2.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "TwillRedirects\\": "src"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "TwillRedirects\\TwillRedirectsServiceProvider"
+      ]
+    },
+    "aliases": {
+      "RedirectManager": "TwillRedirects\\Facades\\RedirectManager"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
