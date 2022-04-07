@@ -23,6 +23,23 @@
         'options' => $type_options,
     ])
 
+    @formField('radios', [
+        'name' => 'code',
+        'label' => __('Redirect code'),
+        'default' => 301,
+        'inline' => true,
+        'options' => [
+            [
+                'value' => 301,
+                'label' => __('Permanent redirect')
+            ],
+            [
+                'value' => 307,
+                'label' => __('Temporary redirect')
+            ],
+        ]
+    ])
+
     @formConnectedFields([
         'fieldName' => 'redirect_type',
         'fieldValues' => \TwillRedirects\Enums\RedirectTypes::INTERNAL,

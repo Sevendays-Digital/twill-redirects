@@ -11,7 +11,7 @@ class TwillRedirectMiddleware
     public function handle(Request $request, Closure $next)
     {
         if ($redirect = RedirectManager::getRedirectForRequest($request)) {
-            redirect($redirect->getTarget(), 302)->send();
+            redirect($redirect->getTarget(), $redirect->code ?? 301)->send();
             exit;
         }
 

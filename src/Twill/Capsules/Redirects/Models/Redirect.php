@@ -17,7 +17,8 @@ class Redirect extends Model
         'from',
         'to',
         'to_external',
-        'redirectable'
+        'redirectable',
+        'code'
     ];
 
     protected $attributes = [
