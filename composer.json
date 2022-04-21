@@ -5,7 +5,7 @@
   "license": "MIT",
   "require": {
     "php": ">=8",
-    "area17/twill": "^2.6"
+    "area17/twill": "^2.8"
   },
   "autoload": {
     "psr-4": {
