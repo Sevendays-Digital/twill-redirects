@@ -21,7 +21,7 @@ php artisan vendor:publish --tag=twill-redirects-config
 Finally run the migrations:
 
 ```
-php artsian migrate
+php artisan migrate
 ```
 
 ## Usage
