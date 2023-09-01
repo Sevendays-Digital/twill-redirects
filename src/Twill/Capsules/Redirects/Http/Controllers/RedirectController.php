@@ -21,20 +21,20 @@ class RedirectController extends BaseModuleController
         $typeOptions = [
             [
                 'value' => RedirectTypes::INTERNAL,
-                'label' => __('An internal path')
+                'label' => __('An internal path'),
             ],
             [
                 'value' => RedirectTypes::EXTERNAL,
-                'label' => __('An external url')
-            ]
+                'label' => __('An external url'),
+            ],
         ];
 
         $browserModules = config('twill_redirects.browser_modules');
 
-        if (!empty($browserModules)) {
+        if (! empty($browserModules)) {
             $typeOptions[] = [
                 'value' => RedirectTypes::ENTITY,
-                'label' => __('An internal entity')
+                'label' => __('An internal entity'),
             ];
         }
 
