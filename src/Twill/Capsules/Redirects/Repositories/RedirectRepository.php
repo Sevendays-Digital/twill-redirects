@@ -4,7 +4,7 @@ namespace TwillRedirects\Twill\Capsules\Redirects\Repositories;
 
 use A17\Twill\Models\Contracts\TwillModelContract;
 use A17\Twill\Repositories\ModuleRepository;
-use Arr;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 use TwillRedirects\Twill\Capsules\Redirects\Models\Redirect;
 
