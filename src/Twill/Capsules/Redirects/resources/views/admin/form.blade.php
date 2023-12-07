@@ -67,17 +67,19 @@
         ])
     @endformConnectedFields
 
-    @formConnectedFields([
-        'fieldName' => 'redirect_type',
-        'fieldValues' => \TwillRedirects\Enums\RedirectTypes::ENTITY,
-        'renderForBlocks' => false,
-        'keepAlive' => true,
-    ])
-        @formField('browser', [
-            'modules' => $browser_modules,
-            'name' => 'redirectable',
-            'label' => __('Target entity'),
-            'max' => 1,
+    @if(! empty($browser_modules))
+        @formConnectedFields([
+            'fieldName' => 'redirect_type',
+            'fieldValues' => \TwillRedirects\Enums\RedirectTypes::ENTITY,
+            'renderForBlocks' => false,
+            'keepAlive' => true,
         ])
-    @endformConnectedFields
+            @formField('browser', [
+                'modules' => $browser_modules,
+                'name' => 'redirectable',
+                'label' => __('Target entity'),
+                'max' => 1,
+            ])
+        @endformConnectedFields
+    @endif
 @stop
